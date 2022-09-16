@@ -7,6 +7,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        //Light mode colors
         "darkGray-5": '#141416',
         "darkGray-4": '#222529',
         "darkGray-3": '#23262F',
@@ -24,6 +25,8 @@ module.exports = {
         "whitish": '#FCFCFD',
         "blueMain": '#316BFF',
         "gold": '#FFD166',
+
+        //Dark mode colors
       }
     },
   },
