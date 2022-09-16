@@ -24,18 +24,15 @@ module.exports = {
         "lightGray-2": '#92929A',
         "lightGray-2": '#B1B5C3',
         "lightGray-3": '#E7ECF3',
-        "lightGray-4": '#FCFCFD',
-        "lightGray-5": '#FAFAFA',
+        "lightGray-4": "#F4F5F6",
+        "lightGray-5": '#FCFCFD',
+        "lightGray-6": '#FAFAFA',
         "transparentDark": '#14141633',
         "redPrimary": '#FF543D',
         "whitish": '#FCFCFD',
         "blueMain": '#316BFF',
         "blueTransparent": '316BFF33',
         "starGold": '#FFD166',
-
-        //Dark mode colors
-        "lightGray-1-dark": "#F4F5F6",
-        "lightGray-2-dark": "#FCFCFD",
       },
       
     },
