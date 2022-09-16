@@ -61,7 +61,7 @@ function Trending() {
         <div className="container px-32 pt-24 pb-8 mx-auto space-y-4 max-w-5xl ">
             <h2 className='text-center text-5xl text-darkGray-4 font-dmsans font-bold'>Trending Cities</h2>
             <p className='text-center text-lg text-darkGray-1'>The most searched for cities on TopGuide</p>
-            <div className='md:grid md:grid-cols-2 md:grid-rows-3'>
+            <div className='md:grid md:grid-cols-2 md:grid-rows-3 md:gap-5 md:items-center md:justify-center'>
                 {
                     trendingCities.data.map(cityData => <CityCard picURI={cityData.picURI} city={cityData.city} rating={cityData.rating} votes={cityData.votes} price={cityData.price} />
                         )
@@ -73,10 +73,18 @@ function Trending() {
   )
 }
 
-function CityCard({picURI, city, rating, votes, price}) {
+interface cityInfo{
+    picURI: StaticImageData,
+    city: string,
+    rating: number,
+    votes: number,
+    price: number,
+}
+
+function CityCard({picURI, city, rating, votes, price}: cityInfo) {
     return (
-        <div className='flex flex-row justify-between'>
-            <Image className='bg-slate-400' src={picURI} height="170px" width="160px"/>
+        <div className='flex flex-row justify-start p-10 space-x-6'>
+            <Image className='rounded-xl ' src={picURI} height="170px" width="160px"/>
             <div>
                 <h4>{city}</h4>
                 <p>
