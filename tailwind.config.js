@@ -5,6 +5,12 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
+    fontFamily: {
+      'dmsans': "'DM Sans', sans-serif",
+      'opensans': "'Open Sans', sans-serif",
+      'poppins': "'Poppins', sans-serif",
+      'roboto': "'Roboto', sans-serif"
+    },
     extend: {
       colors: {
         //Light mode colors
@@ -24,10 +30,14 @@ module.exports = {
         "redPrimary": '#FF543D',
         "whitish": '#FCFCFD',
         "blueMain": '#316BFF',
-        "gold": '#FFD166',
+        "blueTransparent": '316BFF33',
+        "starGold": '#FFD166',
 
         //Dark mode colors
-      }
+        "lightGray-1-dark": "#F4F5F6",
+        "lightGray-2-dark": "#FCFCFD",
+      },
+      
     },
   },
   plugins: [],
