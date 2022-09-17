@@ -56,12 +56,12 @@ const trendingCities = {
 
 function Trending() {
   return (
-    <section className="b bg-lightGray-7">
-      <div className="container mx-auto max-w-5xl space-y-4 pt-24 pb-8 ">
-        <h2 className="text-center font-dmsans text-5xl font-bold text-darkGray-4">
+    <section className="bg-lightGray-7 dark:bg-darkGray-6">
+      <div className="container mx-auto max-w-5xl space-y-4 px-5 pt-24 pb-8 md:px-0">
+        <h2 className="text-center font-dmsans text-5xl font-bold text-darkGray-4 dark:text-white">
           Trending Cities
         </h2>
-        <p className="text-center text-lg text-darkGray-1">
+        <p className="text-center text-lg text-darkGray-1 dark:text-lightGray-3">
           The most searched for cities on TopGuide
         </p>
         <div className="md:grid md:grid-cols-2 md:grid-rows-3 md:items-center md:justify-center md:gap-x-10 md:gap-y-8">
@@ -90,7 +90,7 @@ interface cityInfo {
 
 function CityCard({ picURI, city, rating, votes, price }: cityInfo) {
   return (
-    <div className="flex flex-row justify-between rounded-3xl bg-white px-10 py-8">
+    <div className="mt-5 w-4/5 md:w-full md:mt-0 mx-auto flex flex-row justify-between rounded-3xl bg-white dark:bg-darkGray-4 px-10 py-8 space-x-8">
         <div>
             <Image
                 className="rounded-2xl"
@@ -101,8 +101,8 @@ function CityCard({ picURI, city, rating, votes, price }: cityInfo) {
             />
         </div>
       
-      <div className="flex flex-col justify-between">
-        <h4 className="text-2xl font-dmsans font-bold">{city}</h4>
+      <div className="flex flex-col justify-around w-full">
+        <h4 className="text-2xl font-dmsans font-bold text-darkGray-2 dark:text-lightGray-5">{city}</h4>
         <p className="flex flex-row justify-start items-center">
           <svg
             width="14"
@@ -119,16 +119,15 @@ function CityCard({ picURI, city, rating, votes, price }: cityInfo) {
               fill="#FFD166"
             />
           </svg>
-          <span className="font-dmsans text-darkGray-1 text-md">{`${rating}`}</span>
-          <span className="font-dmsans text-lightGray-1 text-md">{` (${votes})`}</span>
+          <span className="font-dmsans text-darkGray-1 text-md dark:text-lightGray-3">{`${rating}`}</span>
+          <span className="font-dmsans text-lightGray-1 text-md dark:text-lightGray-3">{` (${votes})`}</span>
           
         </p>
         <p>
-            <span className="text-darkGray-1 text-xl font-bold">{`$${price.toFixed(2)}`}</span>
-          
-          <span className="text-lightGray-1 text-md">/night</span>
+            <span className="text-darkGray-1 text-xl font-bold dark:text-lightGray-5">{`$${price.toFixed(2)}`}</span>
+            <span className="text-lightGray-1 text-md dark:text-lightGray-3">/night</span>
         </p>
-        <button className="text-white bg-blueMain rounded-md px-4">Book Now</button>
+        <button className="text-white bg:text-whitish-2 bg-blueMain hover:bg-blueDarker rounded-md px-4 w-28">Book Now</button>
       </div>
     </div>
   );
