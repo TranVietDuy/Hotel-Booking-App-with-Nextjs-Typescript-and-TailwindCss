@@ -1,20 +1,24 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import Footer from '../components/Footer'
-import Cta from '../components/Cta'
-import Image from 'next/image'
+import type { NextPage } from "next"
+import Head from "next/head"
+import Cta from "../components/Cta"
+import Footer from "../components/Footer"
+import Header from "../components/Header"
+import Hero from "../components/Hero"
 
 const Home: NextPage = () => {
-  return (
-    <>
-    <Head>
-      <title>Pun Hotel Booking App</title>
-    </Head>
-    <div className='text-white bg-darkGray-5 font-dmsans'>Feel free to delete, just checking if everithing connected properly</div>
-    <Cta />
-    <Footer />
-    </>
-  )
+	return (
+		<>
+			<Head>
+				<title>Pun Hotel Booking App</title>
+			</Head>
+			<Header />
+			
+			<Hero />
+			
+			<Cta />
+			<Footer />
+		</>
+	)
 }
 
 export default Home
