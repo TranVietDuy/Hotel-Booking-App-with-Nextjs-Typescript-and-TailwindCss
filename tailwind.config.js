@@ -31,6 +31,7 @@ module.exports = {
         "transparentDark": '#14141633',
         "redPrimary": '#FF543D',
         "whitish": '#FCFCFD',
+        "whitish-2": "#FFFFFF",
         "blueMain": '#316BFF',
         "blueTransparent": '316BFF33',
         "starGold": '#FFD166',
