@@ -13,12 +13,12 @@ export default function Hero() {
 				alt="Hero"
 			/>
 			<div className="absolute mx-5 my-36 md:mx-20">
-				<h1 className="font-bold font-dmsans text-5xl md:text-5xl xl:text-7xl !leading-[114%]  text-darkGray-1">
+				<h1 className="font-extrabold font-dmsans text-5xl md:text-5xl xl:text-7xl !leading-[120%]  text-darkGray-1">
 					Book With Us
 					<br />
 					And Enjoy your
 					<br />
-					Journey
+					Journey!
 				</h1>
 			</div>
 		</div>
