@@ -4,7 +4,7 @@ import heroImg from "../img/hero-image.jpg"
 
 export default function Hero() {
 	return (
-		<div className="relative h-[510px]">
+		<div className="relative h-[510px] ">
 			<Image
 				src={heroImg}
 				layout="fill"
@@ -12,10 +12,13 @@ export default function Hero() {
 				objectPosition="center"
 				alt="Hero"
 			/>
-
-			<div className="relative max-w-7xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8">
-				<h1 className="mt-6 text-6xl font-bold text-gray-300 max-w-3xl">
-					Book With Us <br/>And Enjoy<br/>your Yourney!
+			<div className="absolute mx-5 my-36 md:mx-20">
+				<h1 className="font-bold font-dmsans text-5xl md:text-5xl xl:text-7xl !leading-[114%]  text-darkGray-1">
+					Book With Us
+					<br />
+					And Enjoy your
+					<br />
+					Journey
 				</h1>
 			</div>
 		</div>

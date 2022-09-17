@@ -20,7 +20,7 @@ export default function Header() {
 			</Link>
 			<nav className="flex items-center space-x-9">
 				<Link href="/login">
-					<a className="text-base font-dmsans font-bold text-gray-600 hover:text-gray-900">
+					<a className="text-base font-dmsans font-bold text-darkGray-1 hover:text-gray-900">
 						Login
 					</a>
 				</Link>
