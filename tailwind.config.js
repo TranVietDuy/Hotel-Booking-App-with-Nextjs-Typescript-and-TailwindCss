@@ -13,7 +13,7 @@ module.exports = {
     },
     extend: {
       colors: {
-        //Light mode colors
+        "darkGray-6": '#18191B',
         "darkGray-5": '#141416',
         "darkGray-4": '#222529',
         "darkGray-3": '#23262F',
@@ -33,6 +33,7 @@ module.exports = {
         "whitish": '#FCFCFD',
         "whitish-2": "#FFFFFF",
         "blueMain": '#316BFF',
+        "blueDarker": '#0047FD',
         "blueTransparent": '316BFF33',
         "starGold": '#FFD166',
       },
