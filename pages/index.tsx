@@ -4,6 +4,7 @@ import Cta from "../components/Cta"
 import Footer from "../components/Footer"
 import Header from "../components/Header"
 import Hero from "../components/Hero"
+import Trending from "../components/Trending"
 
 const Home: NextPage = () => {
 	return (
@@ -14,7 +15,7 @@ const Home: NextPage = () => {
 			<Header />
 			
 			<Hero />
-			
+			<Trending />
 			<Cta />
 			<Footer />
 		</>
