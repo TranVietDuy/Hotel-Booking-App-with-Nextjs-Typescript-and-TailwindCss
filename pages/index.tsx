@@ -4,7 +4,6 @@ import Cta from "../components/Cta"
 import Footer from "../components/Footer"
 import Header from "../components/Header"
 import Hero from "../components/Hero"
-import SectionDestination from "../components/SectionDestination"
 
 
 const Home: NextPage = () => {
@@ -16,8 +15,7 @@ const Home: NextPage = () => {
 			<Header />
 			
 			<Hero />
-            <SectionDestination />
-			
+
 			<Cta />
 			<Footer />
 		</>
