@@ -34,7 +34,7 @@ function Explore({ numberOfEntries, exploreCards }: ExploreProps) {
                     {numberOfEntries.toLocaleString()} beautiful places to go
                 </p>
 
-                <div className="flex flex-row space-x-4 overflow-scroll">
+                <div className="flex flex-row space-x-7 overflow-x-scroll md:justify-between md:space-x-0">
                     {exploreCards.map((cardData) => (
                         <div className="w-[17rem]">
                             <ExploreCard
