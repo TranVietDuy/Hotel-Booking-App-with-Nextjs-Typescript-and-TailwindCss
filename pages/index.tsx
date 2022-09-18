@@ -14,7 +14,6 @@ const Home: NextPage = () => {
 				<title>Pun Hotel Booking App</title>
 			</Head>
 			<Header />
-			
 			<Hero />
 <<<<<<< HEAD
 
