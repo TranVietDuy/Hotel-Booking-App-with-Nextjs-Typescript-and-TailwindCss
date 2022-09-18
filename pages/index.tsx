@@ -6,6 +6,7 @@ import Header from "../components/Header";
 import Hero from "../components/Hero";
 import Trending from "../components/Trending";
 import Explore from "../components/Explore";
+import { testData } from "../tempData/explore";
 
 const Home: NextPage = () => {
     return (
@@ -15,7 +16,7 @@ const Home: NextPage = () => {
             </Head>
             <Header />
             <Hero />
-            <Explore numberOfEntries={10788} />
+            <Explore numberOfEntries={10788} exploreCards={testData} />
             <Trending />
             <Cta />
             <Footer />
