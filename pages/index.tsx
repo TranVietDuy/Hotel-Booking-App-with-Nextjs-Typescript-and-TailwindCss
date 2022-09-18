@@ -15,11 +15,7 @@ const Home: NextPage = () => {
 			</Head>
 			<Header />
 			<Hero />
-<<<<<<< HEAD
-
-=======
 			<Trending />
->>>>>>> 75fb4d8c845b5f1cb6e884c30f9f447da69cb0e4
 			<Cta />
 			<Footer />
 		</>
