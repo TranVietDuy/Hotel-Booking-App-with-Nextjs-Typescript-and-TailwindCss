@@ -13,7 +13,7 @@ export default function Hero() {
                 alt="Hero"
             />
             <div className="absolute mx-5 my-28 md:mx-20">
-                <h1 className="font-dmsans text-5xl font-extrabold !leading-[116%] text-darkGray-1 md:text-5xl  xl:text-7xl">
+                <h1 className="font-dmsans text-4xl font-extrabold !leading-[116%] text-darkGray-1 md:text-5xl  xl:text-7xl">
                     Book With Us
                     <br />
                     And Enjoy your
