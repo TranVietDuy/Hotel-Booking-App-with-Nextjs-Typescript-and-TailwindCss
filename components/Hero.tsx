@@ -18,7 +18,7 @@ export default function Hero() {
                     <br />
                     And Enjoy your
                     <br />
-                    Journey! testing the conflicts
+                    Journey!
                 </h1>
             </div>
         </div>
