@@ -1,9 +1,10 @@
 import * as React from 'react';
 
+
 export interface  SectionDestinationProps {
 }
 
-export function SectionDestination (props:  SectionDestinationProps) {
+export default function SectionDestination (props:  SectionDestinationProps) {
     const destinationList = [
         {
         }
