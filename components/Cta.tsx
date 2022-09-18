@@ -5,7 +5,7 @@ import bg from "../img/cta-bg.png";
 function Cta() {
     return (
         <section className="bg-white">
-            <div className="cta container relative top-16 mx-auto flex flex-col items-center justify-between rounded-2xl bg-blueMain py-12 px-20 md:flex-row">
+            <div className="container relative top-16 mx-auto flex max-w-6xl flex-col items-center justify-between rounded-2xl bg-blueMain py-12 px-20 md:flex-row">
                 {/* Text */}
                 <div className="max-w-sm space-y-4">
                     <h2 className="font-poppins text-4xl font-extrabold tracking-wide text-white">

@@ -6,7 +6,7 @@ import logo from "../public/logo.svg";
 function Footer() {
     return (
         <footer className="mt-4 w-full bg-whitish-2 px-8 pt-24 pb-4 dark:bg-darkGray-4">
-            <div className="container mx-auto flex flex-col-reverse md:flex-row">
+            <div className="container mx-auto flex max-w-5xl flex-col-reverse md:flex-row">
                 {/* Logo and mode toggle section */}
                 <div className="space-y-6 md:w-1/3 md:max-w-2xl">
                     <div className="flex items-center">

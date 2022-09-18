@@ -56,8 +56,8 @@ const trendingCities = {
 
 function Trending() {
     return (
-        <section className="bg-lightGray-7 dark:bg-darkGray-6">
-            <div className="container mx-auto max-w-5xl space-y-4 px-5 pt-24 pb-8 md:px-0">
+        <section className="bg-lightGray-7 pt-10 dark:bg-darkGray-6">
+            <div className="container mx-auto max-w-4xl space-y-4 px-5 pb-8 md:px-0">
                 <h2 className="text-center font-dmsans text-5xl font-bold text-darkGray-4 dark:text-white">
                     Trending Cities
                 </h2>
