@@ -5,6 +5,7 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
 import Trending from "../components/Trending";
+import Explore from "../components/Explore";
 
 const Home: NextPage = () => {
     return (
@@ -14,6 +15,7 @@ const Home: NextPage = () => {
             </Head>
             <Header />
             <Hero />
+            <Explore numberOfEntries={10788} />
             <Trending />
             <Cta />
             <Footer />
