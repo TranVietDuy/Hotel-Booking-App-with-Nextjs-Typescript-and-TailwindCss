@@ -2,25 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
-.nightModeToggle input{
+.nightModeToggle input {
     height: 0;
     width: 0;
     visibility: hidden;
-  }
-  
-  .toggle--label {
+}
+
+.toggle--label {
     margin-left: 10px;
     cursor: pointer;
     text-indent: -9999px;
     width: 45px;
-    background: #B1B5C3;
+    background: #b1b5c3;
     display: inline-block;
     border-radius: 100px;
     position: relative;
-  }
-  
-  .toggle--label:after {
-    content: '';
+}
+
+.toggle--label:after {
+    content: "";
     position: absolute;
     top: 4px;
     left: 2px;
@@ -29,20 +29,19 @@
     background: #fff;
     border-radius: 90px;
     transition: 0.3s;
-  }
-  
-  .nightModeToggle input:checked + label {
-    background: #464950;
-  }
-  
-  .nightModeToggle input:checked + label:after {
-    left: calc(100% - 16px);
-  }
+}
 
-  .cta {
-    background-image: url(../img/cta-bg-1.png),
-                      url(../img/cta-bg-2.png),
-                      url(../img/cta-bg-3.png);
+.nightModeToggle input:checked + label {
+    background: #464950;
+}
+
+.nightModeToggle input:checked + label:after {
+    left: calc(100% - 16px);
+}
+
+.cta {
+    background-image: url(../img/cta-bg-1.png), url(../img/cta-bg-2.png),
+        url(../img/cta-bg-3.png);
     background-repeat: no-repeat;
     background-position: 2% 200%, 50% 470%, 90% -200%;
-  }
+}
