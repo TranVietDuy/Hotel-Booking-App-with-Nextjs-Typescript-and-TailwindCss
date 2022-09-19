@@ -60,7 +60,7 @@ export interface  FeaturedDestinationProps {
 
 export default function FeaturedDestination ({tittle, picture, rating, numberOfActivities, avatar}:  FeaturedDestinationProps) {
   return (
-      <div className="mx-auto bg-lightGray-7 px-4 pt-11 sm:px-6 lg:px-12">
+      <div className="mx-auto py-10 bg-lightGray-7 px-4 pt-11 sm:px-6 lg:px-12">
           {/* Headline */}
           <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
               <h2 className=" font-dmsans text-3xl font-bold leading-10 tracking-tight text-darkGray-4 sm:text-4xl ">
@@ -73,17 +73,16 @@ export default function FeaturedDestination ({tittle, picture, rating, numberOfA
           </div>
           {/* Featured Destination */}
           <div className="">
-              <div className="grid grid-flow-row">
+              <div className="grid gap-4 ">
                   {featuredDestinations.map((destination) => (
                       <div className="flex flex-col items-center justify-center">
-                          <div className="relative h-80 w-auto">
+                          <div className="relative h-80 w-full">
                               <Image
                                   src={destination.picture}
                                   layout="fill"
                                   className="rounded-lg "
-                                  
                               />
-                          </div>
+                          </div>                            
                       </div>
                   ))}
               </div>
