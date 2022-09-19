@@ -68,11 +68,11 @@ export default function SectionDestination({
 
             {/* Destination cards */}
 
-            <div className=" md:m-30 my-10 grid grid-flow-col gap-4 overflow-scroll px-4 py-6 sm:mx-40 sm:grid-flow-dense sm:grid-cols-2 sm:gap-8 md:mx-10 md:grid-cols-3 lg:grid-cols-4 ">
+            <div className=" md:m-30 my-10 grid grid-flow-col gap-4 overflow-scroll snap-x px-4 py-6 sm:mx-40 sm:grid-flow-dense sm:grid-cols-2 sm:gap-8 md:mx-10 md:grid-cols-3 lg:grid-cols-4 ">
                 {destinations.map((destination) => (
                     <div
                         key={destination.title}
-                        className="w-64 cursor-pointer rounded-xl border-[1.3px] border-slate-200 p-5 transition-transform duration-200 ease-out hover:scale-105 hover:bg-white  hover:shadow-lg sm:w-auto"
+                        className="w-64 cursor-pointer rounded-xl border-[1.3px] snap-center border-slate-200 p-5 transition-transform duration-200 ease-out hover:scale-105 hover:bg-white  hover:shadow-lg sm:w-auto"
                     >
                         <div className="relative h-16 w-16 ">
                             <Image
