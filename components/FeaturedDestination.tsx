@@ -76,7 +76,7 @@ export default function FeaturedDestination ({tittle, picture, rating, numberOfA
               <div className="grid grid-flow-row">
                   {featuredDestinations.map((destination) => (
                       <div className="flex flex-col items-center justify-center">
-                          <div className="relative h-80 w-80">
+                          <div className="relative h-80 w-auto">
                               <Image
                                   src={destination.picture}
                                   layout="fill"
