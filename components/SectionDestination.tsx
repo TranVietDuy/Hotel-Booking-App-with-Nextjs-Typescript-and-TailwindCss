@@ -12,7 +12,7 @@ interface SectionDestinationCard {
 
 export default function SectionDestination({ data }: SectionDestinationProps) {
     return (
-        <div className="mx-auto bg-lightGray-7 px-4 pt-32 sm:px-6 lg:px-8">
+        <div className="mx-auto bg-lightGray-6 px-4 pt-32 sm:px-6 lg:px-8">
             {/* Headline */}
 
             <div className="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">

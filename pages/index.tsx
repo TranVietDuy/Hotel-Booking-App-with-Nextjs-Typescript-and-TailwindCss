@@ -8,9 +8,11 @@ import SectionDestination from "../components/SectionDestination";
 import Trending from "../components/Trending";
 import Explore from "../components/Explore";
 import { testData } from "../tempData/explore";
+import { topTours } from "../tempData/top-tour";
 import { featuredDestinations } from "../tempData/featured-destinations";
 import { destinations } from "../tempData/section-destination";
 import FeaturedDestination from "../components/FeaturedDestination";
+import TopTour from "../components/TopTour";
 
 const Home: NextPage = () => {
     return (
@@ -22,6 +24,7 @@ const Home: NextPage = () => {
             <Hero />
             <SectionDestination data={destinations} />
             <FeaturedDestination data={featuredDestinations} />
+            <TopTour data={topTours} />
             <Explore numberOfEntries={10788} exploreCards={testData} />
             <Trending />
             <Cta />

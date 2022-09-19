@@ -19,7 +19,7 @@ export default function FeaturedDestination({
     data,
 }: FeaturedDestinationProps) {
     return (
-        <div className="mx-auto bg-lightGray-7 py-10 px-4 pt-11 sm:px-6 lg:px-12">
+        <div className="mx-auto bg-lightGray-6 py-10 px-4 pt-11 sm:px-6 lg:px-12">
             {/* Headline */}
             <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
                 <h2 className=" font-dmsans text-3xl font-bold leading-10 tracking-tight text-darkGray-4 sm:text-4xl ">

@@ -25,8 +25,8 @@ interface ExploreCardData {
 
 function Explore({ numberOfEntries, exploreCards }: ExploreProps) {
     return (
-        <section className="w-full bg-lightGray-7 py-10 text-darkGray-4 dark:bg-darkGray-6 dark:text-white">
-            <div className="container mx-auto max-w-6xl space-y-6">
+        <section className="w-full bg-lightGray-6 py-10 text-darkGray-4 dark:bg-darkGray-6 dark:text-white">
+            <div className="container mx-auto max-w-6xl space-y-6 px-6 md:px-0">
                 <h3 className="mb-3 text-center font-dmsans text-5xl font-bold dark:text-white md:text-left">
                     Explore the world
                 </h3>
