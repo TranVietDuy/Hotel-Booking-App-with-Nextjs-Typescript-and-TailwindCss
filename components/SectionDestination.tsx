@@ -74,7 +74,7 @@ export default function SectionDestination({
                         key={destination.title}
                         className="w-64 cursor-pointer rounded-xl border-[1.3px] border-slate-200 p-5 transition-transform duration-200 ease-out hover:scale-105 hover:bg-white  hover:shadow-lg sm:w-auto"
                     >
-                        <div className="relative h-16 w-16 ">
+                        <div className="relative h-16 w-auto ">
                             <Image
                                 src={destination.picture}
                                 alt=""

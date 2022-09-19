@@ -8,6 +8,7 @@ import SectionDestination from "../components/SectionDestination";
 import Trending from "../components/Trending";
 import Explore from "../components/Explore";
 import { testData } from "../tempData/explore";
+import FeaturedDestination from "../components/FeaturedDestination";
 
 const Home: NextPage = () => {
     return (
@@ -18,6 +19,7 @@ const Home: NextPage = () => {
             <Header />
             <Hero />
             <SectionDestination />
+            <FeaturedDestination />
             <Explore numberOfEntries={10788} exploreCards={testData} />
             <Trending />
             <Cta />

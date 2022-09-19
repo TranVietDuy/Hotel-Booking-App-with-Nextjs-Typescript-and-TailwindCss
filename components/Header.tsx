@@ -4,7 +4,7 @@ import logo from "../public/logo.svg";
 
 export default function Header() {
     return (
-        <header className="flex items-center justify-between bg-lightGray-7 px-6 py-5 ">
+        <header className="sticky z-50 top-0 shadow-md flex items-center justify-between bg-lightGray-7 px-6 py-5 ">
             <Link href="/">
                 <a className="flex items-center space-x-2">
                     <Image
