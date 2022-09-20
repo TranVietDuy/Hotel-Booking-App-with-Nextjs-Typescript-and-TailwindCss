@@ -50,7 +50,7 @@
 
 .gallery {
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(6, 400px);
+    grid-template-rows: 280px 410px 410px repeat(3, 220px);
 }
 
 @media screen and (min-width: 768px) {
