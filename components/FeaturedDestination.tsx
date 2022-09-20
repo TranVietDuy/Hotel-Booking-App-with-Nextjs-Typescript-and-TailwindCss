@@ -18,11 +18,11 @@ export default function FeaturedDestination({
     data,
 }: FeaturedDestinationProps) {
     return (
-        <section className="bg-lightGray-6">
+        <section className="w-full bg-lightGray-6">
             <div className="mx-auto py-10 px-4 pt-11 sm:px-6 lg:px-12">
                 {/* Headline */}
                 <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
-                    <h2 className=" font-dmsans text-3xl font-bold leading-10 tracking-tight text-darkGray-4 sm:text-4xl ">
+                    <h2 className="font-dmsans text-3xl font-bold leading-10 tracking-tight text-darkGray-4 sm:text-4xl ">
                         Featured Destinations
                     </h2>
 
@@ -32,7 +32,7 @@ export default function FeaturedDestination({
                 </div>
                 {/* Featured Destination */}
                 <div>
-                    <div className="gallery space-y-3 md:grid md:gap-6 md:space-y-0">
+                    <div className="gallery grid space-y-3 md:gap-6 md:space-y-0">
                         {data.map((destination, index) => {
                             return (
                                 <div className={`destination-grid${index}`}>
@@ -58,7 +58,7 @@ export default function FeaturedDestination({
 function DestinationCard(data: FeaturedDestinationCard) {
     return (
         <div className="flex h-full w-full flex-col items-center justify-center">
-            <div className="relative w-full md:h-full">
+            <div className="relative h-full w-full">
                 <Image
                     src={data.picture}
                     layout="fill"
