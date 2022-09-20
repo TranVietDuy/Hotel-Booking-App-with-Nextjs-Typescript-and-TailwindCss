@@ -1,10 +1,9 @@
 import * as React from "react";
 import Image from "next/image";
-
 import { StaticImageData } from "next/image";
 
 interface FeaturedDestinationCard {
-    tittle: string;
+    title: string;
     picture: StaticImageData;
     rating: string;
     numberOfActivities: string;
@@ -19,31 +18,72 @@ export default function FeaturedDestination({
     data,
 }: FeaturedDestinationProps) {
     return (
-        <div className="mx-auto bg-lightGray-6 py-10 px-4 pt-11 sm:px-6 lg:px-12">
-            {/* Headline */}
-            <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
-                <h2 className=" font-dmsans text-3xl font-bold leading-10 tracking-tight text-darkGray-4 sm:text-4xl ">
-                    Featured Destinations
-                </h2>
+        <section className="bg-lightGray-6">
+            <div className="mx-auto py-10 px-4 pt-11 sm:px-6 lg:px-12">
+                {/* Headline */}
+                <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
+                    <h2 className=" font-dmsans text-3xl font-bold leading-10 tracking-tight text-darkGray-4 sm:text-4xl ">
+                        Featured Destinations
+                    </h2>
 
-                <p className="mt-4 max-w-prose  font-dmsans text-base text-lightGray-1 ">
-                    Popular destinations open to visitors from Indonesia
-                </p>
+                    <p className="mt-4 max-w-prose font-dmsans text-base text-lightGray-1 ">
+                        Popular destinations open to visitors from Indonesia
+                    </p>
+                </div>
+                {/* Featured Destination */}
+                <div>
+                    <div className="gallery space-y-3 md:grid md:gap-6 md:space-y-0">
+                        {data.map((destination, index) => {
+                            return (
+                                <div className={`destination-grid${index}`}>
+                                    <DestinationCard
+                                        title={destination.title}
+                                        picture={destination.picture}
+                                        rating={destination.rating}
+                                        numberOfActivities={
+                                            destination.numberOfActivities
+                                        }
+                                        avatar={destination.avatar}
+                                    />
+                                </div>
+                            );
+                        })}
+                    </div>
+                </div>
             </div>
-            {/* Featured Destination */}
-            <div className="">
-                <div className="grid gap-4 ">
-                    {data.map((destination) => (
-                        <div className="flex flex-col items-center justify-center">
-                            <div className="relative h-80 w-full">
-                                <Image
-                                    src={destination.picture}
-                                    layout="fill"
-                                    className="rounded-lg "
-                                />
-                            </div>
-                        </div>
-                    ))}
+        </section>
+    );
+}
+
+function DestinationCard(data: FeaturedDestinationCard) {
+    return (
+        <div className="flex h-full w-full flex-col items-center justify-center">
+            <div className="relative w-full md:h-full">
+                <Image
+                    src={data.picture}
+                    layout="fill"
+                    objectFit="cover"
+                    objectPosition="center"
+                    className="h-full w-full rounded-lg"
+                />
+                <span className="absolute left-6 top-4 rounded-full bg-white py-0 px-4 text-lg font-bold text-redPrimary">
+                    {data.rating}
+                </span>
+
+                <div className="absolute left-6 bottom-4 space-y-6">
+                    <h5 className="text-5xl font-bold text-white">{`${data.title}`}</h5>
+                    <p className=" flex flex-row items-center space-x-3 text-xl text-white">
+                        <Image
+                            className="inline-block rounded-full"
+                            src={data.avatar}
+                            width="43px"
+                            height="43px"
+                            objectFit="cover"
+                            objectPosition="center"
+                            alt="avatar"
+                        />
+                        <span>{` ${data.numberOfActivities} Activities`}</span>
+                    </p>
                 </div>
             </div>
         </div>

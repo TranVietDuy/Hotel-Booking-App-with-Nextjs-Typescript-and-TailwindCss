@@ -4,48 +4,49 @@ import londonPic from "../img/temp/featured-destinations/feature-london.jpg";
 import sydneyPic from "../img/temp/featured-destinations/feature-sydney.jpg";
 import hoianPic from "../img/temp/featured-destinations/feature-hoian.jpg";
 import tokyoPic from "../img/temp/featured-destinations/feature-tokyo.jpg";
+import avatar from "../img/temp/featured-destinations/avatar.jpg";
 
 export const featuredDestinations = [
     {
-        tittle: "Barcelona, Spain",
+        title: "Barcelona, Spain",
         picture: barcelonaPic,
         rating: "3.5",
         numberOfActivities: "196",
-        avatar: "https://images.unsplash.com/photo-1612881920003-8b8b0b0b5b1a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+        avatar: avatar,
     },
     {
-        tittle: "Paris, France",
+        title: "Paris, France",
         picture: parisPic,
         rating: "4.5",
         numberOfActivities: "196",
-        avatar: "https://images.unsplash.com/photo-1612881920003-8b8b0b0b5b1a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+        avatar: avatar,
     },
     {
-        tittle: "London, England",
+        title: "London, England",
         picture: londonPic,
         rating: "4.5",
         numberOfActivities: "196",
-        avatar: "https://images.unsplash.com/photo-1612881920003-8b8b0b0b5b1a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+        avatar: avatar,
     },
     {
-        tittle: "Sydney, Australia",
+        title: "Sydney, Australia",
         picture: sydneyPic,
         rating: "4.5",
         numberOfActivities: "196",
-        avatar: "https://images.unsplash.com/photo-1612881920003-8b8b0b0b5b1a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+        avatar: avatar,
     },
     {
-        tittle: "Hoi An, Vietnam",
+        title: "Hoi An, Vietnam",
         picture: hoianPic,
         rating: "4.5",
         numberOfActivities: "196",
-        avatar: "https://images.unsplash.com/photo-1612881920003-8b8b0b0b5b1a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+        avatar: avatar,
     },
     {
-        tittle: "Tokyo, Japan",
+        title: "Tokyo, Japan",
         picture: tokyoPic,
         rating: "4.5",
         numberOfActivities: "196",
-        avatar: "https://images.unsplash.com/photo-1612881920003-8b8b0b0b5b1a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+        avatar: avatar,
     },
 ];

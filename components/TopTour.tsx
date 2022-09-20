@@ -15,7 +15,7 @@ interface TopTourProps {
 
 function TopTour({ data }: TopTourProps) {
     return (
-        <section className="w-full bg-lightGray-6 py-10 text-darkGray-4 dark:bg-darkGray-6 dark:text-white">
+        <section className="w-full bg-lightGray-6 py-10 text-darkGray-4 dark:bg-darkGray-6">
             <div className="container mx-auto max-w-6xl space-y-6 px-9 md:px-0">
                 <h3 className="mb-3 text-center font-dmsans text-5xl font-bold dark:text-white md:text-left">
                     Top Tour

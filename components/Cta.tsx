@@ -4,8 +4,8 @@ import bg from "../img/cta-bg.png";
 
 function Cta() {
     return (
-        <section className="w-full bg-white">
-            <div className="container mx-auto max-w-6xl px-6">
+        <section className="w-full bg-white dark:bg-darkGray-4">
+            <div className="container mx-auto max-w-6xl px-6 dark:bg-darkGray-4">
                 <div className="relative top-16 flex flex-col items-center justify-between rounded-2xl bg-blueMain py-12 px-20 md:flex-row">
                     {/* Text */}
                     <div className="space-y-4">
