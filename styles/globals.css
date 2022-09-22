@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.modalButton {
+    @apply w-full rounded-xl bg-blueMain py-3 text-xl text-white hover:bg-blueDarker;
+}
+
 @layer components {
     .nightModeToggle input {
         height: 0;
