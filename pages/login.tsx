@@ -7,7 +7,7 @@ import { RiFacebookFill } from "react-icons/ri";
 function LoginForm() {
     return (
         <div className="mx-auto space-y-4 bg-whitish-2 py-8 px-10 md:w-7/12 xl:w-1/3">
-            <h2 className="text-center text-5xl font-bold text-darkGray-5">
+            <h2 className="text-center text-5xl font-bold text-darkGray-5 sm:whitespace-nowrap">
                 Welcome Back!
             </h2>
             <div className="flex">
