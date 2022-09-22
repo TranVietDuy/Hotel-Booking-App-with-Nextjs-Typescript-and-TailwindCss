@@ -1,5 +1,6 @@
 import React from "react";
 import Image, { StaticImageData } from "next/image";
+import { nanoid } from "nanoid";
 import manilaPic from "../img/temp/trending/trending-manila.png";
 import sfrPic from "../img/temp/trending/trending-sfr.png";
 import frankfPic from "../img/temp/trending/trending-frankf.png";
@@ -67,6 +68,7 @@ function Trending() {
                 <div className="md:grid md:grid-cols-2 md:grid-rows-3 md:items-center md:justify-center md:gap-x-10 md:gap-y-8">
                     {trendingCities.data.map((cityData) => (
                         <CityCard
+                            key={nanoid()}
                             picURI={cityData.picURI}
                             city={cityData.city}
                             rating={cityData.rating}
@@ -115,8 +117,8 @@ function CityCard({ picURI, city, rating, votes, price }: cityInfo) {
                         className="inline-block"
                     >
                         <path
-                            fill-rule="evenodd"
-                            clip-rule="evenodd"
+                            fillRule="evenodd"
+                            clipRule="evenodd"
                             d="M7 11.9532L3.43074 13.9147C2.91697 14.1971 2.31846 13.7374 2.4171 13.1362L3.09765 8.98853L0.213886 6.0502C-0.203981 5.62442 0.0251203 4.87905 0.600728 4.79162L4.59003 4.18568L6.37322 0.408861C6.6306 -0.136287 7.3694 -0.136287 7.62678 0.408861L9.40997 4.18568L13.3993 4.79162C13.9749 4.87905 14.204 5.62442 13.7861 6.0502L10.9023 8.98853L11.5829 13.1362C11.6815 13.7374 11.083 14.1971 10.5693 13.9147L7 11.9532Z"
                             fill="#FFD166"
                         />

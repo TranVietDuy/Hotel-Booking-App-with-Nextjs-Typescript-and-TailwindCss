@@ -1,13 +1,14 @@
 import * as React from "react";
 import Image from "next/image";
 import { StaticImageData } from "next/image";
+import { nanoid } from "nanoid";
 
 interface FeaturedDestinationCard {
     title: string;
     picture: StaticImageData;
     rating: string;
     numberOfActivities: string;
-    avatar: string;
+    avatar: StaticImageData;
 }
 
 interface FeaturedDestinationProps {
@@ -35,7 +36,10 @@ export default function FeaturedDestination({
                     <div className="gallery grid space-y-3 md:gap-6 md:space-y-0">
                         {data.map((destination, index) => {
                             return (
-                                <div className={`destination-grid${index}`}>
+                                <div
+                                    key={nanoid()}
+                                    className={`destination-grid${index}`}
+                                >
                                     <DestinationCard
                                         title={destination.title}
                                         picture={destination.picture}

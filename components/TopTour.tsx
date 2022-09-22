@@ -1,6 +1,7 @@
 import React from "react";
 import { StaticImageData } from "next/image";
 import Image from "next/image";
+import { nanoid } from "nanoid";
 
 interface Tour {
     pic: StaticImageData;
@@ -25,11 +26,12 @@ function TopTour({ data }: TopTourProps) {
                 </p>
                 <div className="container mx-auto flex flex-col md:flex-row md:space-x-5">
                     {data.map((tour) => (
-                        <div className="md:max-w-1/3 relative mt-5 h-[31rem] w-full md:w-1/3">
+                        <div
+                            key={nanoid()}
+                            className="md:max-w-1/3 relative mt-5 h-[31rem] w-full md:w-1/3"
+                        >
                             <Image
                                 src={tour.pic}
-                                width="370px"
-                                height="495px"
                                 layout="fill"
                                 objectFit="cover"
                                 objectPosition="center"
