@@ -18,7 +18,7 @@ export default function FeaturedDestination({
     data,
 }: FeaturedDestinationProps) {
     return (
-        <section className="w-full bg-lightGray-6">
+        <section className="w-full bg-lightGray-6 dark:bg-darkGray-5">
             <div className="mx-auto py-10 px-4 pt-11 sm:px-6 lg:px-12">
                 {/* Headline */}
                 <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
@@ -66,7 +66,7 @@ function DestinationCard(data: FeaturedDestinationCard) {
                     objectPosition="center"
                     className="h-full w-full rounded-lg"
                 />
-                <span className="absolute left-6 top-4 rounded-full bg-white py-0 px-4 text-lg font-bold text-redPrimary">
+                <span className="absolute left-6 top-4 rounded-full bg-white py-0 px-4 text-lg font-bold text-redPrimary dark:bg-white/50">
                     {data.rating}
                 </span>
 
