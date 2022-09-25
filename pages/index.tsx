@@ -1,4 +1,5 @@
 import type { NextPage } from "next";
+import useModal from "../hooks/useModal";
 import Head from "next/head";
 import Cta from "../components/Cta";
 import Footer from "../components/Footer";
@@ -20,7 +21,6 @@ const Home: NextPage = () => {
             <Head>
                 <title>Pun Hotel Booking App</title>
             </Head>
-            <Header />
             <Hero />
             <SectionDestination data={destinations} />
             <FeaturedDestination data={featuredDestinations} />
@@ -28,7 +28,6 @@ const Home: NextPage = () => {
             <Explore numberOfEntries={10788} exploreCards={testData} />
             <Trending />
             <Cta />
-            <Footer />
         </>
     );
 };

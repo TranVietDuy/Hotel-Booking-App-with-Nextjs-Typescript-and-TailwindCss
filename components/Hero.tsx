@@ -6,7 +6,6 @@ export default function Hero() {
     return (
         <div className="relative h-[510px] ">
             <Image
-                priority
                 src={heroImg}
                 layout="fill"
                 objectFit="cover"

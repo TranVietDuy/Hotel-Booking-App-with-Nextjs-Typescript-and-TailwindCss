@@ -36,6 +36,7 @@ module.exports = {
                 blueDarker: "#0047FD",
                 blueTransparent: "#316BFF33",
                 starGold: "#FFD166",
+                modalBg: "#36363696",
             },
         },
     },
