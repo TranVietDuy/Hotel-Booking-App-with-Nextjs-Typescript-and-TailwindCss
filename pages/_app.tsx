@@ -7,6 +7,7 @@ import { useRouter } from "next/router";
 import { LoginForm } from "../components/LoginForm";
 import SignupForm from "../components/SignupForm";
 import { useEffect } from "react";
+import { SessionProvider } from "next-auth/react";
 
 function MyApp({ Component, pageProps }: AppProps) {
     const router = useRouter();
@@ -30,32 +31,37 @@ function MyApp({ Component, pageProps }: AppProps) {
 
     return (
         <>
-            {!router.pathname.includes("login") &&
-                !router.pathname.includes("signup") && (
-                    <Header
-                        openLogin={openLogin}
-                        closeLogin={closeLogin}
-                        openSignup={openSignup}
-                        closeSignup={closeSignup}
-                    />
-                )}
-            <Component {...pageProps} />
-            {!router.pathname.includes("login") &&
-                !router.pathname.includes("signup") && <Footer />}
-            {(loginIsShown || signupIsShown) && (
-                <div
-                    className="fixed top-0 left-0 z-20 flex h-screen w-full items-center justify-center bg-modalBg"
-                    onClick={(e) => handleOutsideClick(e)}
-                >
-                    {loginIsShown ? (
-                        <LoginForm isModal={true} closeModal={closeLogin} />
-                    ) : signupIsShown ? (
-                        <SignupForm isModal={true} closeModal={closeSignup} />
-                    ) : (
-                        ""
+            <SessionProvider>
+                {!router.pathname.includes("login") &&
+                    !router.pathname.includes("signup") && (
+                        <Header
+                            openLogin={openLogin}
+                            closeLogin={closeLogin}
+                            openSignup={openSignup}
+                            closeSignup={closeSignup}
+                        />
                     )}
-                </div>
-            )}
+                <Component {...pageProps} />
+                {!router.pathname.includes("login") &&
+                    !router.pathname.includes("signup") && <Footer />}
+                {(loginIsShown || signupIsShown) && (
+                    <div
+                        className="fixed top-0 left-0 z-20 flex h-screen w-full items-center justify-center bg-modalBg"
+                        onClick={(e) => handleOutsideClick(e)}
+                    >
+                        {loginIsShown ? (
+                            <LoginForm isModal={true} closeModal={closeLogin} />
+                        ) : signupIsShown ? (
+                            <SignupForm
+                                isModal={true}
+                                closeModal={closeSignup}
+                            />
+                        ) : (
+                            ""
+                        )}
+                    </div>
+                )}
+            </SessionProvider>
         </>
     );
 }

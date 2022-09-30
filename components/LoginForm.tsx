@@ -3,6 +3,7 @@ import { useState } from "react";
 import { FaGoogle } from "react-icons/fa";
 import { RiFacebookFill } from "react-icons/ri";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
+import { signIn } from "next-auth/react";
 
 export interface LoginFormProps {
     isModal: boolean;
@@ -32,6 +33,11 @@ export function LoginForm({ isModal, closeModal }: LoginFormProps) {
         console.log(loginData);
     }
 
+    function handleGoogleSignIn(e: any) {
+        e.preventDefault();
+        signIn("google", { callbackUrl: "/" });
+    }
+
     return (
         <div
             className="relative space-y-4 rounded-3xl bg-whitish-2 py-8 px-10 dark:bg-darkGray-5 md:w-7/12 xl:w-1/3"
@@ -50,9 +56,9 @@ export function LoginForm({ isModal, closeModal }: LoginFormProps) {
                         aria-hidden="true"
                     >
                         <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
                             d="M6 18L18 6M6 6l12 12"
                         />
                     </svg>
@@ -62,7 +68,10 @@ export function LoginForm({ isModal, closeModal }: LoginFormProps) {
                 Welcome Back!
             </h2>
             <div className="flex">
-                <button className="modalButton justify-around font-medium">
+                <button
+                    className="modalButton justify-around font-medium"
+                    onClick={(e) => handleGoogleSignIn(e)}
+                >
                     <FaGoogle className="relative bottom-[2px] mr-1 inline" />
                     <span> Sign in with Google</span>
                 </button>
