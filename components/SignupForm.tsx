@@ -3,7 +3,7 @@ import { useState } from "react";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import Link from "next/link";
 import { FaGoogle } from "react-icons/fa";
-import { RiFacebookFill } from "react-icons/ri";
+import { RiGithubFill } from "react-icons/ri";
 
 export interface SignupFormProps {
     isModal: boolean;
@@ -77,7 +77,7 @@ function SignupForm({ isModal, closeModal }: SignupFormProps) {
                     <span> Sign up with Google</span>
                 </button>
                 <button className="ml-3 w-1/4 rounded-xl bg-darkGray-1 text-white hover:bg-darkGray-4 md:w-1/6">
-                    <RiFacebookFill className="inline-block h-8 w-8" />
+                    <RiGithubFill className="inline-block h-8 w-8" />
                 </button>
             </div>
             <div className="flex items-center justify-around space-x-1 text-sm text-lightGray-1 dark:text-lightGray-3">

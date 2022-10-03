@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import logo from "../public/logo.svg";
@@ -62,7 +62,7 @@ export default function Header({
                     </button>
                 )}
 
-                {!session && (
+                {status != "loading" && !session && (
                     <button
                         className="rounded-md bg-blue-600 px-4 py-2 font-dmsans text-base text-white hover:bg-blue-700"
                         onClick={handleSignupButtonClick}
@@ -82,14 +82,20 @@ interface UserMenuProps {
 
 function UserMenu({ menuOpen, session }: UserMenuProps) {
     const [isOpen, toggleOpen] = useState(menuOpen);
+    useEffect(() => {
+        window.addEventListener("click", () => toggleOpen(false));
+    }, []);
 
-    function handleClick() {
+    function handleClick(e: any) {
+        e.stopPropagation();
         toggleOpen((current) => !current);
     }
     return (
         <div
             className="relative flex cursor-pointer flex-row items-center space-x-3 text-darkGray-1"
-            onClick={handleClick}
+            onClick={(e) => {
+                handleClick(e);
+            }}
         >
             <div className="h-8 w-8 overflow-hidden rounded-full">
                 <Image
@@ -108,11 +114,16 @@ function UserMenu({ menuOpen, session }: UserMenuProps) {
             </div>
             <ul
                 className={
-                    "text-md absolute right-0 top-16 w-60 space-y-4 rounded-2xl bg-white p-4 font-dmsans text-darkGray-4 opacity-100 transition-all" +
-                    `${isOpen ? " h-36 " : " h-0 overflow-hidden opacity-0"}`
+                    "text-md absolute right-0 top-16 w-60 cursor-default space-y-4 rounded-2xl bg-white p-4 font-dmsans text-darkGray-4 opacity-100 transition-all " +
+                    `${
+                        isOpen
+                            ? " h-36 "
+                            : " h-0 overflow-hidden py-0 opacity-0"
+                    }`
                 }
+                onClick={(e) => e.stopPropagation()}
             >
-                <li>
+                <li className="cursor-pointer transition hover:text-lightGray-1">
                     <Link href={"/profile"}>
                         <a>
                             <FiUser className="mr-3 inline-block text-lightGray-8" />
@@ -121,7 +132,7 @@ function UserMenu({ menuOpen, session }: UserMenuProps) {
                     </Link>
                 </li>
 
-                <li>
+                <li className="cursor-pointer transition hover:text-lightGray-1">
                     <Link href={"/bookings"}>
                         <a>
                             <RiSuitcaseLine className="mr-3 inline-block text-lightGray-8" />
@@ -130,7 +141,7 @@ function UserMenu({ menuOpen, session }: UserMenuProps) {
                     </Link>
                 </li>
 
-                <li>
+                <li className="cursor-pointer transition hover:text-lightGray-1">
                     <a onClick={() => signOut()}>
                         <RiLogoutCircleLine className="mr-3 inline-block text-lightGray-8" />
                         <span>Sign Out</span>

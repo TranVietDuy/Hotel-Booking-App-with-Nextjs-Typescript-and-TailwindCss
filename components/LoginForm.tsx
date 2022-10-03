@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { FaGoogle } from "react-icons/fa";
-import { RiFacebookFill } from "react-icons/ri";
+import { RiGithubFill } from "react-icons/ri";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import { signIn } from "next-auth/react";
 
@@ -29,13 +29,17 @@ export function LoginForm({ isModal, closeModal }: LoginFormProps) {
 
     function handleSubmit(e: any) {
         e.preventDefault();
-        console.log("handleSubmit():");
         console.log(loginData);
     }
 
     function handleGoogleSignIn(e: any) {
         e.preventDefault();
         signIn("google", { callbackUrl: "/" });
+    }
+
+    function handleGithubSignIn(e: any) {
+        e.preventDefault();
+        signIn("github", { callbackUrl: "/" });
     }
 
     return (
@@ -76,7 +80,10 @@ export function LoginForm({ isModal, closeModal }: LoginFormProps) {
                     <span> Sign in with Google</span>
                 </button>
                 <button className="ml-3 w-1/4 rounded-xl bg-darkGray-1 text-white hover:bg-darkGray-4 md:w-1/6">
-                    <RiFacebookFill className="inline-block h-8 w-8" />
+                    <RiGithubFill
+                        className="inline-block h-8 w-8"
+                        onClick={(e) => handleGithubSignIn(e)}
+                    />
                 </button>
             </div>
             <div className="flex items-center justify-around space-x-1 text-sm text-lightGray-1 dark:text-lightGray-3">
